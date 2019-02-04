@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Curly Boiz Application</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -15,11 +15,14 @@
     <main>
         <form id="form">
             
-            <section id="name">
+            <fieldset id="name">
+                <legend>
+                    Who dis?
+                </legend>
                 <label>Full Name: 
                     <input type="text" id="name" placeholder="Full name">
                 </label>
-            </section> 
+            </fieldset> 
             
             <fieldset id="address">
                 <legend>Where do you sleep at night?</legend>
@@ -60,7 +63,7 @@
                 </legend>
 
                 <label>
-                    <input type="checkbox" name="toppings" value="pineapple">Pineapple
+                    <input oninvalid="setCustomValidity('Think Again...')" type="checkbox" name="toppings" value="pineapple" required>Pineapple
                 </label>
                 <label>
                     <input type="checkbox" name="toppings" value="mushroom">Mushroom

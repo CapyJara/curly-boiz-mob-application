@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./assets/og-curly-boi.jpg"></a>
+    </header>
+
+    <main>
+        <form id="form">
+            
+            <section id="name">
+                <label>Full Name: 
+                    <input type="text" id="name" placeholder="Full name">
+                </label>
+            </section> 
+            
+            <section id="street">
+                <label>Address: 
+                    <input type="text" id="street" placeholder="Street address">
+                </label>
+
+                <label>City: 
+                    <input type="text" id="city" placeholder="City">
+                </label>
+
+                State: <select id="state">
+                    <option hidden disabled selected>State</option>
+                    <option value="california">California</option>
+                    <option value="oregon">Oregon</option>
+                    <option value="washington">Washington</option>
+                    <option value="other">Other</option>
+                </select>
+            </section>
+
+            <fieldset>
+                <legend>Where do you hide your keys?</legend>
+                <label>
+                    <input type="radio" name="key" value="doormat" >Under the doormat
+                </label>
+                <label>
+                    <input type="radio" name="key" value="flower-pot" >In the flower pot
+                </label>
+                <label>
+                    <input type="radio" name="key" value="rock" >In the fake rock
+                </label>
+            </fieldset>
+            <hr>
+
+            <fieldset>
+                <legend>
+                    How you like you pizza?
+                </legend>
+
+                <label>
+                    <input type="checkbox" name="toppings" value="pineapple">Pineapple
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="mushroom">Mushroom
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="ramen">Ramen
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="anchovie">Anchovie
+                </label>
+                <label>
+                    <input type="checkbox" name="toppings" value="pickled-harring">Pickled Harring
+                </label>
+
+            </fieldset>
+
+            <button id="submit">Submit</button>
+
+
+
+
+
+
+            <!-- email address -->
+            
+            <!-- mother's maiden name -->
+        
+            <!-- name first pet  -->
+        
+            <!-- how gullible are you scale -->
+        
+            <!-- routing number -->
+         
+        </form>
+    </main>
+    <!-- submission button link to another html page-->
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

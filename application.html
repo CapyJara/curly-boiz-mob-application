@@ -21,7 +21,8 @@
                 </label>
             </section> 
             
-            <section id="street">
+            <fieldset id="address">
+                <legend>Where do you sleep at night?</legend>
                 <label>Address: 
                     <input type="text" id="street" placeholder="Street address">
                 </label>
@@ -37,9 +38,9 @@
                     <option value="washington">Washington</option>
                     <option value="other">Other</option>
                 </select>
-            </section>
+            </fieldset>
 
-            <fieldset>
+            <fieldset id="key-hiding-spot">
                 <legend>Where do you hide your keys?</legend>
                 <label>
                     <input type="radio" name="key" value="doormat" >Under the doormat
@@ -51,9 +52,9 @@
                     <input type="radio" name="key" value="rock" >In the fake rock
                 </label>
             </fieldset>
-            <hr>
+        
 
-            <fieldset>
+            <fieldset id="pizza-toppings">
                 <legend>
                     How you like you pizza?
                 </legend>
@@ -76,12 +77,13 @@
 
             </fieldset>
 
+            <fieldset>
+                <legend>How Curly are you?</legend>
+
+                <input type="range" id="curliness" name="curly" min="0" max="10"><span id="average-curl">5</span>
+            </fieldset>
+
             <button id="submit">Submit</button>
-
-
-
-
-
 
             <!-- email address -->
             

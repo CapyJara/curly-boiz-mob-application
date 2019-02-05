@@ -8,99 +8,89 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    
     <header>
-        <a href="./index.html"><img src="./assets/og-curly-boi.jpg"></a>
+        <a href="./index.html"><img src="./assets/og-curly-boi.jpg" alt="return home page"></a>
     </header>
 
     <main>
         <form id="form">
-            
-            <fieldset id="name">
-                <legend>
-                    Who dis?
-                </legend>
-                <label>Full Name: 
-                    <input type="text" id="name" placeholder="Full name">
+            <fieldset>
+                <legend>Who you is?</legend>
+                <label>
+                    Full Name:
+                    <input type="text" name="name" placeholder="enter name here">  
                 </label>
-            </fieldset> 
-            
-            <fieldset id="address">
+            </fieldset>
+
+            <fieldset>
                 <legend>Where do you sleep at night?</legend>
-                <label>Address: 
-                    <input type="text" id="street" placeholder="Street address">
+                <label>
+                    Street address:
+                    <input type="text" name="street" placeholder="Street Address">  
                 </label>
-
-                <label>City: 
-                    <input type="text" id="city" placeholder="City">
+                <label>
+                    City:
+                    <input type="text" name="city" placeholder="City">  
                 </label>
-
-                State: <select id="state">
-                    <option hidden disabled selected>State</option>
-                    <option value="california">California</option>
-                    <option value="oregon">Oregon</option>
-                    <option value="washington">Washington</option>
-                    <option value="other">Other</option>
-                </select>
+                <label>
+                    State:
+                    <select name="state">
+                        <option value="" hidden disable selected>State</option>
+                        <option value="california">California</option>
+                        <option value="oregon">Oregon</option>
+                        <option value="hawaii">Hawaii</option>
+                    </select>
+                </label>
             </fieldset>
 
-            <fieldset id="key-hiding-spot">
-                <legend>Where do you hide your keys?</legend>
-                <label>
-                    <input type="radio" name="key" value="doormat" >Under the doormat
-                </label>
-                <label>
-                    <input type="radio" name="key" value="flower-pot" >In the flower pot
-                </label>
-                <label>
-                    <input type="radio" name="key" value="rock" >In the fake rock
-                </label>
-            </fieldset>
+            <fieldset>
+                <legend>Where's your hidden key? ;)</legend>
         
+                <label>
+                    <input type="radio" name="key" value="doormat">  
+                    Under the Doormat
+                </label>
 
-            <fieldset id="pizza-toppings">
-                <legend>
-                    How you like you pizza?
-                </legend>
+                <label>
+                    <input type="radio" name="key" value="pot">  
+                    In the flower plant
+                </label>
 
                 <label>
-                    <input oninvalid="setCustomValidity('Think Again...')" type="checkbox" name="toppings" value="pineapple" required>Pineapple
-                </label>
-                <label>
-                    <input type="checkbox" name="toppings" value="mushroom">Mushroom
-                </label>
-                <label>
-                    <input type="checkbox" name="toppings" value="ramen">Ramen
-                </label>
-                <label>
-                    <input type="checkbox" name="toppings" value="anchovie">Anchovie
-                </label>
-                <label>
-                    <input type="checkbox" name="toppings" value="pickled-harring">Pickled Harring
+                    <input type="radio" name="key" value="rock">
+                    Fake rock
                 </label>
 
             </fieldset>
 
             <fieldset>
-                <legend>How Curly are you?</legend>
+                <legend>What do you eat on your za?</legend>
 
-                <input type="range" id="curliness" name="curly" min="0" max="10"><span id="average-curl">5</span>
+                <label>
+                    Pineapple: <input type="checkbox" name="toppings" value="pineapple">
+                </label>
+                <label>
+                    Roni: <input type="checkbox" name="toppings" value="roni">
+                </label>
+                <label>
+                    Ham: <input type="checkbox" name="toppings" value="ham">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>How Curly you be?</legend>
+
+                <input type="range" name="curliness" min="0" max="10" id="curly">
+                <span id="curly-display">5</span>
             </fieldset>
 
             <button id="submit">Submit</button>
 
-            <!-- email address -->
-            
-            <!-- mother's maiden name -->
-        
-            <!-- name first pet  -->
-        
-            <!-- how gullible are you scale -->
-        
-            <!-- routing number -->
-         
         </form>
     </main>
-    <!-- submission button link to another html page-->
+
+
     <script type="module" src="./src/main.js"></script>
 </body>
 </html>

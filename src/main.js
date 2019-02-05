@@ -1,48 +1,35 @@
-const submit = document.getElementById('form');
-const curlyRange = document.getElementById('curliness');
-const averageCurl = document.getElementById('average-curl');
+const form = document.getElementById('form');
+const slider = document.getElementById('curly');
+const curlyDisplay = document.getElementById('curly-display');
 
-curlyRange.addEventListener('change', function() { 
-    averageCurl.textContent = curlyRange.value;
+slider.addEventListener('change', function(event) {
+    event.preventDefault();
+    curlyDisplay.textContent = slider.value;
 });
 
-submit.addEventListener('submit', function() {
+form.addEventListener('submit', function(event) {
     event.preventDefault();
- 
-    const name = submit.elements.name.value;
-    const street = submit.elements.street.value;
-    const city = submit.elements.city.value;
-    const state = submit.elements.state.value;
-    const key = submit.elements.key.value;
- 
-    const pizza = submit.elements.toppings;
+    const name = form.elements.name.value;
+    const streetAddress = form.elements.street.value;
+    const city = form.elements.city.value;
+    const state = form.elements.state.value;
+    const key = form.elements.key.value;
+    
+    const pizza = form.elements.toppings;
     const pizzaPreference = [];
- 
-    for(let i = 0; i < pizza.length; i++){
-        const toppingChoices = pizza[i];
-        if(toppingChoices.checked) {
-            pizzaPreference[i] = toppingChoices.value;
-        }
+    for(let i = 0; i < pizza.length; i++) {
+        const pizzaSelection = pizza[i];
+        if(pizzaSelection.checked){
+            pizzaPreference[i] = pizzaSelection.value;
+        } 
     }
- 
-    const appSubmission = {
+
+    const application = {
         name: name,
-        street: street,
-        city: city,
-        state: state,
+        address: [streetAddress, city, state],
         key: key,
         pizza: pizzaPreference,
-        curl: curlyRange.value
+        curliness: slider.value
     };
- 
-    console.log(appSubmission);
+    console.log(application);
 });
-
-
-
-
-        // form incomplete checker
-        // read input
-        // evaluate pineapple conformity
-            // take care of them
-            // in the street fraternity

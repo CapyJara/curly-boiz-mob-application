@@ -6,3 +6,7 @@ img {
 fieldset {
     margin: 15px;
 }
+
+dd{
+    text-transform: capitalize;
+}

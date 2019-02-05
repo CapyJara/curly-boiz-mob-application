@@ -20,7 +20,7 @@ form.addEventListener('submit', function(event) {
     for(let i = 0; i < pizza.length; i++) {
         const pizzaSelection = pizza[i];
         if(pizzaSelection.checked){
-            pizzaPreference[i] = pizzaSelection.value;
+            pizzaPreference.push(pizzaSelection.value);
         } 
     }
 
@@ -31,5 +31,10 @@ form.addEventListener('submit', function(event) {
         pizza: pizzaPreference,
         curliness: slider.value
     };
+
+
     console.log(application);
+    const serialize = JSON.stringify(application);
+    window.localStorage.setItem('application', serialize);
+    window.location = '../thank-you.html';
 });

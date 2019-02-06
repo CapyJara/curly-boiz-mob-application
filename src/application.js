@@ -32,9 +32,15 @@ form.addEventListener('submit', function(event) {
         curliness: slider.value
     };
 
+    let allApplicants = [];
+    const jsonString = window.localStorage.getItem('allApplicants');
 
-    console.log(application);
-    const serialize = JSON.stringify(application);
-    window.localStorage.setItem('application', serialize);
+    if(jsonString) {
+        allApplicants = JSON.parse(jsonString);
+    }
+    allApplicants.push(application);
+
+    const serialize = JSON.stringify(allApplicants);
+    window.localStorage.setItem('allApplicants', serialize);
     window.location = '../thank-you.html';
 });
